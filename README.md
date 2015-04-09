@@ -13,7 +13,7 @@ For example, on the Host we might have these directories:
 ```
 
 ```bash
-docker run -d -p {ip}:{externalPort}:443 --name web -v /var/www/:/var/www "oodgaard/centos7-nginx-php56:1.0"
+docker run -d -p {ip}:{hostsPort}:443 --name web -v /var/www/:/var/www "oodgaard/centos7-nginx-php56:1.0"
 ```
 
 Included PHP Modules:
