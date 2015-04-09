@@ -11,7 +11,7 @@ MAINTAINER Otto Odgaard <oodgaard@ultraserve.com.au>
 # Add the ngix and PHP dependent repository
 ADD nginx.repo /etc/yum.repos.d/nginx.repo
 
-# Add php 5.6 repo
+# Add repos to get php 5.6 from
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
@@ -47,7 +47,7 @@ RUN yum install -y python-setuptools && yum clean all
 RUN easy_install pip
 RUN pip install supervisor
 
-# Adding the configuration file of the nginx
+# Adding the configuration file for nginx
 ADD nginx.conf /etc/nginx/nginx.conf
 
 # Adding the configuration file of the Supervisor
