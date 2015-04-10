@@ -54,7 +54,7 @@ ADD nginx.conf /etc/nginx/nginx.conf
 ADD supervisord.conf /etc/
 
 # Mounted from the Host
-VOLUME ["/var/www", "/etc/php.ini"]
+VOLUME ["/var/www", "/etc/php.ini", "/etc/hosts", "/etc/resolv.conf"]
 
 # Executing supervisord
 CMD ["supervisord", "-n"]
